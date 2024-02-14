@@ -17,7 +17,7 @@ void setup() {
   pinMode(relay3, OUTPUT);
   pinMode(relay4, OUTPUT);
 
-  // Initialize all relays to OFF state
+  // OFF state
   digitalWrite(relay1, LOW);
   digitalWrite(relay2, LOW);
   digitalWrite(relay3, LOW);
@@ -29,16 +29,16 @@ void loop() {
     char command = BTserial.read();
 
     switch (command) {
-      case '1':
+      case 'A':
         toggleRelay(relay1);
         break;
-      case '2':
+      case 'B':
         toggleRelay(relay2);
         break;
-      case '3':
+      case 'C':
         toggleRelay(relay3);
         break;
-      case '4':
+      case 'D':
         toggleRelay(relay4);
         break;
       default:
